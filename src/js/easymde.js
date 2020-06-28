@@ -1638,6 +1638,7 @@ function EasyMDE(options) {
    }
 
 
+
    // Find the textarea to use
    if (options.element) {
       this.element = options.element;
@@ -1666,6 +1667,10 @@ function EasyMDE(options) {
             }
          }
       }
+   }
+
+   if (options.additionalToolbar) {
+      options.toolbar = options.toolbar.concat(options.additionalToolbar);
    }
 
    // Editor preview styling class.
